@@ -9,18 +9,19 @@
 			var text="";
 		  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-		  for (var i = 0; i < 5; i++)
+		  for (var i = 0; i < 10; i++)
 		    text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-		  return text;
+				document.getElementById('visitoridclass').innerHTML = text;
+				document.getElementById('accountidclass').innerHTML = text;
+  return text;
 		}
+
+
  </script>
 
 
  <script>
 	 var visitor = makeid();
-
-
 	(function(apiKey){
 	    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
 	    v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
@@ -65,6 +66,10 @@
 	<button class="checkout ico btn btn-default""> Click Me </button>
 
 	<h2> Really?¿</h2>
+
+	<h2> visitor id is</h2> <h2 class="visitoridclass"><h2>
+
+	<h2> account id is</h2> <h2 class="accountidclass"><h2>
 
 
 
