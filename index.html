@@ -2,23 +2,22 @@
 	<title>ACME Corp.</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!-- meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';" -->
-	<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
-	<script src ="assets/js/skel.min.js" type="text/javascript"></script>
-	<script src ="assets/js/util.js" type="text/javascript"></script>
-	<script src ="assets/js/jquery.scrollex.min.js" type="text/javascript"></script>
-	<script src ="assets/js/jquery.scrolly.min.js" type="text/javascript"></script>
-	<script src ="assets/js/main.js" type="text/javascript"></script>
-
 
 	<script>
+		function makeid() {
+		  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+		  for (var i = 0; i < 5; i++)
+		    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+		  return text;
+		}
+ </script>
 
 
-var visitor = new string(to.String(Math.round(Math.random())));
+ <script>
+	 var visitor = makeid();
+
 
 	(function(apiKey){
 	    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
@@ -31,7 +30,7 @@ var visitor = new string(to.String(Math.round(Math.random())));
 	        // Please use Strings, Numbers, or Bools for value types.
 	        pendo.initialize({
 	            visitor: {
-	                id:              visitor   // Required if user is logged in
+	                id:visitor   // Required if user is logged in
 	                // email:        // Optional
 	                // role:         // Optional
 
@@ -40,7 +39,7 @@ var visitor = new string(to.String(Math.round(Math.random())));
 	            },
 
 	            account: {
-	                id:           'ACCOUNT-UNIQUE-ID' // Highly recommended
+	                id:visitor // Highly recommended
 	                // name:         // Optional
 	                // planLevel:    // Optional
 	                // planPrice:    // Optional
