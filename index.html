@@ -23,6 +23,15 @@
 
 
  <script>
+
+   <script>
+    var visitorId="";
+    visitorId=makeid();
+
+    var accountId=""
+    accountId=makeid();
+   </script>
+
 (function(apiKey){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
     v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
@@ -58,16 +67,9 @@
 </script>
 
 
-<script>
- var visitorId="";
- visitorId=makeid();
-
- var accountId=""
- accountId=makeid();
-
- document.getElementById('visitoridclass').innerHTML = visitorId;
- document.getElementById('accountidclass').innerHTML = accountId;
-
+<script type="text/javascript">
+  document.getElementById('visitoridclass').innerHTML = visitorId;
+  document.getElementById('accountidclass').innerHTML = accountId;
 </script>
 
 
