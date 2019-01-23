@@ -26,9 +26,10 @@
 
      var accountId=""
      accountId=makeid();
-
-     document.getElementById('visitoridclass').innerHTML = visitorId;
-     document.getElementById('accountidclass').innerHTML = accountId;
+setTimeout(function(){
+  document.getElementById('visitoridclass').innerHTML = visitorId;
+  document.getElementById('accountidclass').innerHTML = accountId;
+}, 2000)
 
    </script>
 
