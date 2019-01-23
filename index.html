@@ -9,6 +9,7 @@
 
 
 	<script>
+         let  visitorId,accountId;
     $(function() {
 
   		function makeid() {
@@ -22,8 +23,8 @@
   		}
 
 
-     const visitorId = makeid();
-     const accountId=makeid();
+      visitorId = makeid();
+      accountId=makeid();
      document.getElementById('visitoridclass').innerHTML = visitorId;
      document.getElementById('accountidclass').innerHTML = accountId;
    });
