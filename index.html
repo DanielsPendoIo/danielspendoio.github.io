@@ -20,6 +20,16 @@
 		}
  </script>
 
+<script>
+ var visitorId="";
+ visitorId=makeid();
+ document.getElementById('visitoridclass').innerHTML = visitorId;
+
+ var accountId=""
+ accountId=makeid();
+ document.getElementById('accountidclass').innerHTML = accountId;
+</script>
+
 
  <script>
 (function(apiKey){
@@ -31,15 +41,6 @@
 
         // Call this whenever information about your visitors becomes available
         // Please use Strings, Numbers, or Bools for value types.
-
-var visitorId="";
-visitorId=makeid();
-document.getElementById('visitoridclass').innerHTML = visitorId;
-
-var accountId=""
-accountId=makeid();
-document.getElementById('accountidclass').innerHTML = accountId;
-
 
         pendo.initialize({
             visitor: {
