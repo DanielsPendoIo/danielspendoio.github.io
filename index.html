@@ -9,29 +9,25 @@
 
 
 	<script>
-         let  visitorId,accountId;
+      		function makeid() {
+      			var text="";
+      		  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+      		  for (var i = 0; i < 10; i++)
+      		    text += possible.charAt(Math.floor(Math.random() * possible.length));
+      		//		document.getElementById('accountidclass').innerHTML = text;
+            return text;
+      		}
+
+    const  visitorId = makeid();
+    const accountId = makeid();
+
     $(function() {
-
-  		function makeid() {
-  			var text="";
-  		  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-  		  for (var i = 0; i < 10; i++)
-  		    text += possible.charAt(Math.floor(Math.random() * possible.length));
-  		//		document.getElementById('accountidclass').innerHTML = text;
-        return text;
-  		}
-
-
-      visitorId = makeid();
-      accountId=makeid();
      document.getElementById('visitoridclass').innerHTML = visitorId;
      document.getElementById('accountidclass').innerHTML = accountId;
    });
-   </script>
 
 
- <script>
 (function(apiKey){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
     v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
