@@ -15,7 +15,6 @@
 
 		  for (var i = 0; i < 10; i++)
 		    text += possible.charAt(Math.floor(Math.random() * possible.length));
-				document.getElementById('visitoridclass').innerHTML = text;
 		//		document.getElementById('accountidclass').innerHTML = text;
   return text;
 		}
@@ -32,9 +31,16 @@
 
         // Call this whenever information about your visitors becomes available
         // Please use Strings, Numbers, or Bools for value types.
+var visitorId=makeid();
+document.getElementById('visitoridclass').innerHTML = visitorId;
+
+var accountId=makeid();
+document.getElementById('visitoridclass').innerHTML = accountId;
+
+
         pendo.initialize({
             visitor: {
-                id:              'daniels'   // Required if user is logged in
+                id:              visitorId   // Required if user is logged in
                 // email:        // Optional
                 // role:         // Optional
 
@@ -43,7 +49,7 @@
             },
 
             account: {
-                id:           'ACCOUNT-UNIQUE-ID' // Highly recommended
+                id:          accountId // Highly recommended
                 // name:         // Optional
                 // planLevel:    // Optional
                 // planPrice:    // Optional
