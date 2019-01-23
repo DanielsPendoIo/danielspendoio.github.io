@@ -20,10 +20,6 @@
 		}
  </script>
 
-
-
- <script>
-
    <script>
     var visitorId="";
     visitorId=makeid();
@@ -32,6 +28,14 @@
     accountId=makeid();
    </script>
 
+
+   <script>
+     document.getElementById('visitoridclass').innerHTML = visitorId;
+     document.getElementById('accountidclass').innerHTML = accountId;
+   </script>
+
+
+ <script>
 (function(apiKey){
     (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
     v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
@@ -65,13 +69,6 @@
         });
 			})('e34255e0-478a-4586-61e2-5ae5615d9295');
 </script>
-
-
-<script type="text/javascript">
-  document.getElementById('visitoridclass').innerHTML = visitorId;
-  document.getElementById('accountidclass').innerHTML = accountId;
-</script>
-
 
 </head>
 
