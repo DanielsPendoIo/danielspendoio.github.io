@@ -31,11 +31,14 @@
 
         // Call this whenever information about your visitors becomes available
         // Please use Strings, Numbers, or Bools for value types.
-var visitorId=makeid();
+
+var visitorId="";
+visitorId=makeid();
 document.getElementById('visitoridclass').innerHTML = visitorId;
 
-var accountId=makeid();
-document.getElementById('visitoridclass').innerHTML = accountId;
+var accountId=""
+accountId=makeid();
+document.getElementById('accountidclass').innerHTML = accountId;
 
 
         pendo.initialize({
@@ -74,9 +77,9 @@ document.getElementById('visitoridclass').innerHTML = accountId;
 
 	<h2> Really?¿</h2>
 
-	<h2> visitor id is</h2> <p id="visitoridclass"> </p>
+	<h2> visitor id is:</h2> <p id="visitoridclass"> </p>
 
-	<h2> account id is</h2> <p id="accountidclass"> </p>
+	<h2> account id is:</h2> <p id="accountidclass"> </p>
 
 
 
