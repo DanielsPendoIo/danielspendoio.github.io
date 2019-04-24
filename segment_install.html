@@ -70,11 +70,12 @@
       analytics.page();
       }}();
 
-      analytics.identify("97980cfea0067", {
-  name: "Peter Gibbons",
+      analytics.identify(visitorId, {
+  name: visitorId,
   email: "peter@initech.com",
   plan: "premium",
-  logins: 5
+  logins: 5,
+  accountId:"accountId"
 });
 
     </script>
