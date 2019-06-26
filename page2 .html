@@ -1,0 +1,92 @@
+                                                                                                                                                                                     <head>
+	<title>ACME Corp.</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<script
+	  src="https://code.jquery.com/jquery-1.12.4.js"
+	  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+	  crossorigin="anonymous"></script>
+
+
+
+<script src="//d2wy8f7a9ursnm.cloudfront.net/v6/bugsnag.min.js"></script>
+<script>window.bugsnagClient = bugsnag('8924af49f148261c7325e23fa63a9630')</script>
+
+
+
+	<script>
+      		function makeid() {
+      			var text="";
+      		  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+      		  for (var i = 0; i < 10; i++)
+      		    text += possible.charAt(Math.floor(Math.random() * possible.length));
+      		//		document.getElementById('accountidclass').innerHTML = text;
+            return text;
+      		}
+
+    let  visitorId = makeid();
+    let accountId = makeid();
+
+    $(function() {
+     document.getElementById('visitoridclass').innerHTML = visitorId;
+     document.getElementById('accountidclass').innerHTML = accountId;
+   });
+
+
+(function(apiKey){
+    (function(p,e,n,d,o){var v,w,x,y,z;o=p[d]=p[d]||{};o._q=[];
+    v=['initialize','identify','updateOptions','pageLoad'];for(w=0,x=v.length;w<x;++w)(function(m){
+        o[m]=o[m]||function(){o._q[m===v[0]?'unshift':'push']([m].concat([].slice.call(arguments,0)));};})(v[w]);
+        y=e.createElement(n);y.async=!0;y.src='https://cdn.pendo.io/agent/static/'+apiKey+'/pendo.js';
+        z=e.getElementsByTagName(n)[0];z.parentNode.insertBefore(y,z);})(window,document,'script','pendo');
+
+        // Call this whenever information about your visitors becomes available
+        // Please use Strings, Numbers, or Bools for value types.
+
+
+        pendo.initialize(
+        {
+      // To disable guides on a web page --->
+      //    disableGuides:true,
+            visitor: {
+                id:         visitorId,   // Required if user is logged in
+               email:       "me@me",
+              role:       "ts"  // Optional
+
+                // You can add any additional visitor level key-values here,
+                // as long as it's not one of the above reserved names.
+            },
+
+            account: {
+                id:          "" // Highly recommended
+                // name:         // Optional
+                // planLevel:    // Optional
+                // planPrice:    // Optional
+                // creationDate: // Optional
+
+                // You can add any additional account level key-values here,
+                // as long as it's not one of the above reserved names.
+            }
+        }
+
+
+        );
+			})('e34255e0-478a-4586-61e2-5ae5615d9295');
+</script>
+
+</head>
+
+<body>
+	<h1> Hello World - page 2 </h1>
+	<button id="buttonId""> Click Me </button>
+
+	<h2> Really?¿</h2>
+
+	<h2> visitor id is:</h2> <p id="visitoridclass"> </p>
+
+	<h2> account id is:</h2> <p id="accountidclass"> </p>
+
+
+
+</body>
